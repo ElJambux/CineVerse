@@ -60,6 +60,22 @@ section h2 {
 }
 
 
+/* DATOS DEL USUARIO */
+#datos-usuario p {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #292930;
+}
+
+#datos-usuario span {
+    font-weight: bold;
+    color: #e63946;
+    text-align: right;
+}
+
+
 /* OFERTA DE VENTA ANTICIPADA */
 #oferta {
     text-align: center;

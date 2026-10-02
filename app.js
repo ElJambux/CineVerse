@@ -14,6 +14,9 @@ console.log("Rol:", rol);
 //COMPROBAR IDIOMA
 const idioma = navigator.language;
 console.log("Idioma:", idioma);
+const idiomaFormateado = new Intl.DisplayNames(["es-ES"], {
+    type: "language"
+}).of(idioma.split("-")[0]);
 
 //COMPROBAR CONEXION
 const conectado = navigator.onLine;
@@ -32,6 +35,21 @@ const fechaFormateada = new Intl.DateTimeFormat("es-Es", {
     dateStyle: "long"
 }).format(ahora);
 console.log("Fecha:", fechaFormateada);
+
+
+//OBTENER LOS DATOS DEL USUARIO CON EL DOM
+const elementoUsuario = document.getElementById("usuario");
+const elementoRol = document.getElementById("rol");
+const elementoIdioma = document.getElementById("idioma");
+const elementoConexion = document.getElementById("conexion");
+const elementoIdSesion = document.getElementById("id-sesion");
+const elementoFecha = document.getElementById("fecha");
+elementoUsuario.textContent = usuario;
+elementoRol.textContent = rol;
+elementoIdioma.textContent = idioma;
+elementoConexion.textContent = conectado ? "Conectado" : "Sin conexión";
+elementoIdSesion.textContent = idSesion;
+elementoFecha.textContent = fechaFormateada;
 
 //SEPARACIÓN DE CORREO
 //CORREO DE EJEMPLO
@@ -91,7 +109,7 @@ console.log("Precio combo:", precioCombo);
 //VALIDAR SUBTOTAL
 const subtotal = precioEntrada + precioCombo;
 
-    console.log("Subtotal válido:", subtotal);
+console.log("Subtotal válido:", subtotal);
 
 //DESCUENTO PROMOCIONAL
 const descuentoTexto = "3";
