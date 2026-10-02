@@ -31,7 +31,7 @@ const ahora = new Date();
 console.log("Fecha actual:", ahora);
 
 //FORMATEAR LA FECHA
-const fechaFormateada = new Intl.DateTimeFormat("es-Es", {
+const fechaFormateada = new Intl.DateTimeFormat("es-ES", {
     dateStyle: "long"
 }).format(ahora);
 console.log("Fecha:", fechaFormateada);
@@ -46,7 +46,7 @@ const elementoIdSesion = document.getElementById("id-sesion");
 const elementoFecha = document.getElementById("fecha");
 elementoUsuario.textContent = usuario;
 elementoRol.textContent = rol;
-elementoIdioma.textContent = idioma;
+elementoIdioma.textContent = idiomaFormateado;
 elementoConexion.textContent = conectado ? "Conectado" : "Sin conexión";
 elementoIdSesion.textContent = idSesion;
 elementoFecha.textContent = fechaFormateada;
@@ -159,8 +159,13 @@ console.log("Total:", total);
 //INCREMENTAR EL NÚMERO DE RESERVA
 let numeroReserva = 100;
 
-const nuevaReserva = ++numeroReserva;
-console.log("Número de reserva:", nuevaReserva);
+const elementoNumeroReserva = document.getElementById("numero-reserva");
+const botonReserva = document.getElementById("incrementar-reserva");
+
+botonReserva.addEventListener("click", () => {
+    const nuevaReserva = ++numeroReserva;
+    elementoNumeroReserva.textContent = nuevaReserva;
+});
 
 
 //BLOQUE 3

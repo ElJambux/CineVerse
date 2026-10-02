@@ -104,17 +104,19 @@ button {
     color: white;
     font-size: 1rem;
     cursor: pointer;
-     transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 button:hover {
     background-color: #b71c2a;
 }
+
 /* BOTÓN CRÍTICA */
 #enviar-critica {
     display: block;
     margin-top: 1rem;
 }
+
 /* BOTÓN DESCUENTO */
 #activar-descuento {
     font-weight: bold;
@@ -146,6 +148,26 @@ button:hover {
     justify-content: space-between;
     padding: 0.6rem 0;
     border-bottom: 1px solid #292930;
+}
+
+#reserva {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #292930;
+    text-align: center;
+}
+
+#reserva p {
+    display: block;
+    border-bottom: none;
+    font-size: 1.1rem;
+}
+
+#numero-reserva {
+    color: #e63946;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-left: 0.4rem;
 }
 
 #total {
@@ -189,5 +211,3 @@ button:hover {
 #lista-criticas article p {
     color: #dddddf;
 }
-
-
